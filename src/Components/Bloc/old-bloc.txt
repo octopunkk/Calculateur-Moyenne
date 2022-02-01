@@ -1,0 +1,60 @@
+<div className="Bloc">
+      <Card sx={{ minWidth: 275 }}>
+        <CardContent>
+          <Typography variant="h5" component="div">
+            <Input value="Bloc Maths"></Input>
+          </Typography>
+          {matieres.map((matiere) => {
+            return (
+              <div className="matiere">
+                <IconButton sx={{ width: "30px", height: "30px", top: "5px " }}>
+                  <RemoveIcon />
+                </IconButton>
+                <p className="nom">{matiere.nom} </p>
+                <p className="note">{matiere.note}</p>
+                <p className="coeff">cœff {matiere.coeff}</p>
+              </div>
+            );
+          })}
+          <div className="nouvelle-matiere">
+            <TextField
+              id="outlined-name"
+              label="Nom"
+              value={name}
+              onChange={handleChangeNom}
+            />
+            <TextField
+              id="outlined-name"
+              label="Note"
+              value={note}
+              onChange={handleChangeNote}
+            />
+            <TextField
+              id="outlined-name"
+              label="Coeff"
+              value={coeff}
+              onChange={handleChangeCoeff}
+            />
+            <IconButton
+              size="small"
+              sx={{ width: "30px", height: "30px", top: "15px" }}
+            >
+              <AddIcon />
+            </IconButton>
+          </div>
+
+          <br />
+          <TextField id="outlined-name" label="Coeff du bloc">
+            {" "}
+          </TextField>
+          <br />
+          <br />
+          <div>Moyenne du bloc :</div>
+        </CardContent>
+        <CardActions>
+          <IconButton size="small" sx={{ color: "red" }}>
+            <ClearIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
+    </div>
