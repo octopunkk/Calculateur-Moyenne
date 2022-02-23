@@ -16,7 +16,7 @@ import AddMatiere from "../AddMatiere/AddMatiere";
 import "./Bloc.css";
 
 export function Bloc(props) {
-  const [matieres, setMatieres] = useState([]);
+  const [matieres, setMatieres] = useState(props.bloc.matieres);
   const [moyenne, setMoyenne] = useState(0);
 
   useEffect(() => {
@@ -81,7 +81,6 @@ export function Bloc(props) {
     });
     updateMoyenne();
   };
-
   return (
     <div className="Bloc">
       <Card sx={{ minWidth: 275 }}>

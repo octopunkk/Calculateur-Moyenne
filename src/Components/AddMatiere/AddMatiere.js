@@ -8,7 +8,6 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import IconButton from "@mui/material/IconButton";
-import { PinDropSharp } from "@mui/icons-material";
 
 export default function AddNote(props) {
   const [open, setOpen] = useState(false);
